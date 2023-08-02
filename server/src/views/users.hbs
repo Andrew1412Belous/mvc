@@ -18,8 +18,15 @@
         <div style="border: 1px solid green; padding: 15px">
             <h3>Username - {{this.username}}</h3>
             <p>Age - {{this.age}}
-            <button>Delete</button>
+            <button onclick="removeById({{this.id}})">Delete</button>
         </div>
     {{/each}}
+    <script>
+        function removeById(id)  {
+            fetch(`http://localhost:5000/users/remove?id=${id}`, {
+                method: 'DELETE'
+            }).then(() => window.location.reload())
+        }
+    </script>
 </body>
 </html>

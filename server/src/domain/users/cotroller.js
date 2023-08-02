@@ -32,7 +32,7 @@ module.exports = {
 
 			userModel.removeByUsername({ username });
 
-			res.render('users-view.hbs', {
+			res.render('users.hbs', {
 				users: userModel.getAll(),
 			});
 		} catch (e) {
@@ -51,7 +51,7 @@ module.exports = {
 
 			userModel.removeById({ id });
 
-			res.render('users-view.hbs', {
+			res.render('users.hbs', {
 				users: userModel.getAll(),
 			});
 		} catch (e) {
