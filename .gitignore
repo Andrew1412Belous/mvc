@@ -1,2 +1,3 @@
-/server/node_modules
-/client/node_modules
+/mvc-server/node_modules
+/mvc-front/node_modules
+/mvc-front/dist
